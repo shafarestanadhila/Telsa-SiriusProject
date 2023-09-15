@@ -20,10 +20,12 @@ Telsa is a website-based application that can be used by breeders, distributors,
 * Clone the repository
   ```
   git clone https://github.com/shafarestanadhila/Telsa-SiriusProject.git
-  cd ficofit-android
+  cd Telsa-SiriusProject
   ```
-* Open project in Android Studio
-* Run the app
+* move the folder into the c -> xampp -> htdocs folder
+* Open project in Visual Studio Code
+* Start you Apche and MySQL at XAMPP
+* Run the app at localhost
 
 # Contributors
 
