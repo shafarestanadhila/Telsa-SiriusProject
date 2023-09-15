@@ -1,6 +1,6 @@
-![Release](https://img.shields.io/github/v/release/Fic-o-Fit/ficofit-android) &nbsp;
-![File Size](https://img.shields.io/github/repo-size/Fic-o-Fit/ficofit-android?logo=github)&nbsp;
-![Downloads](https://img.shields.io/github/downloads/Fic-o-Fit/ficofit-android/total)&nbsp;
+![Release](https://img.shields.io/github/v/release/shafarestanadhila/Telsa-SiriusProject) &nbsp;
+![File Size](https://img.shields.io/github/repo-size/shafarestanadhila/Telsa-SiriusProject?logo=github)&nbsp;
+![Downloads](https://img.shields.io/github/downloads/shafarestanadhila/Telsa-SiriusProject/total)&nbsp;
 
 
 ### About Project
