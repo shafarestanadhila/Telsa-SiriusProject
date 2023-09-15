@@ -19,7 +19,7 @@ Telsa is a website-based application that can be used by breeders, distributors,
 
 * Clone the repository
   ```
-  git clone https://github.com/Fic-o-Fit/ficofit-android.git
+  git clone https://github.com/shafarestanadhila/Telsa-SiriusProject.git
   cd ficofit-android
   ```
 * Open project in Android Studio
@@ -27,4 +27,8 @@ Telsa is a website-based application that can be used by breeders, distributors,
 
 # Contributors
 
-* Nadhila Shafaresta [@nadhilaashaf](https://github.com/shafarestanadhila)
+* Nadhila Shafaresta [@shafarestanadhila](https://github.com/shafarestanadhila) -> Be
+* Rieke Setiawati [@Riekesetiawati](https://github.com/Riekesetiawati)
+* Khairunnisa Hayyu Kusnadi [@niissahk](https://github.com/niissahk)
+* Salsabila Diba Cahyani [@salsabiladcy](https://github.com/salsabiladcy)
+* Sholastika Divia
