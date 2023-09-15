@@ -30,7 +30,7 @@ Telsa is a website-based application that can be used by breeders, distributors,
 # Contributors
 
 * Rieke Setiawati [@Riekesetiawati](https://github.com/Riekesetiawati) - Lead Tech 🚀
-* * Nadhila Shafaresta [@shafarestanadhila](https://github.com/shafarestanadhila) - Backend Developer 💻
+* Nadhila Shafaresta [@shafarestanadhila](https://github.com/shafarestanadhila) - Backend Developer 💻
 * Khairunnisa Hayyu Kusnadi [@niissahk](https://github.com/niissahk) - UI/UX Enthusiast 🎨
 * Salsabila Diba Cahyani [@salsabiladcy](https://github.com/salsabiladcy) - Data Analyst 📊
 * Sholastika Divia - Frontend Developer 🌐
