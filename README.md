@@ -3,7 +3,7 @@
 ![Downloads](https://img.shields.io/github/downloads/shafarestanadhila/Telsa-SiriusProject/total)&nbsp;
 
 
-### About Project
+# About Project
 
 Telsa is a website-based application that can be used by breeders, distributors, and egg agents. The goal is to make it easier for egg farmers, distributors and agents to distribute eggs. As well as, helping to stabilize egg prices.
 
@@ -29,8 +29,8 @@ Telsa is a website-based application that can be used by breeders, distributors,
 
 # Contributors
 
-* Nadhila Shafaresta [@shafarestanadhila](https://github.com/shafarestanadhila) -> Be
-* Rieke Setiawati [@Riekesetiawati](https://github.com/Riekesetiawati)
-* Khairunnisa Hayyu Kusnadi [@niissahk](https://github.com/niissahk)
-* Salsabila Diba Cahyani [@salsabiladcy](https://github.com/salsabiladcy)
-* Sholastika Divia
+* Rieke Setiawati [@Riekesetiawati](https://github.com/Riekesetiawati) - Lead Tech 🚀
+* * Nadhila Shafaresta [@shafarestanadhila](https://github.com/shafarestanadhila) - Backend Developer 💻
+* Khairunnisa Hayyu Kusnadi [@niissahk](https://github.com/niissahk) - UI/UX Enthusiast 🎨
+* Salsabila Diba Cahyani [@salsabiladcy](https://github.com/salsabiladcy) - Data Analyst 📊
+* Sholastika Divia - Frontend Developer 🌐
