@@ -14,29 +14,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="image/telsa.png" type="image/x-icon" />
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="image/favicon.png" alt="logo" class="img-fluid" width="160" height="40"  /></a>
+          <a class="navbar-brand" href="index.html"><img src="image/telsa.png" alt="logo" class="img-fluid" width="160" height="40"  /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="Order.php">Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shop.html">Shop</a>
+                    <a class="nav-link" href="Tracking.php">Tracking</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="services.html">Data</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -52,9 +52,14 @@
                 <li class="nav-button">
                     <a class="nav-signup" href="signup.html"><img src="image/signup-menu.png" alt="signup" class="img-fluid4" width="90" height="30"  /></a>
                 </li>
+                
             </ul>
           </div>
           </div>
       </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

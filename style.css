@@ -18,7 +18,7 @@ hr{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    margin: 5px;
+    margin-left: 20px;
 }
 .nav-link::after{
     content: '';
@@ -26,7 +26,7 @@ hr{
     transition: all 0.2s;
     height: 3px;
     width: 100%;
-    background-color: #82378c;
+    background-color: #569171;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -50,7 +50,7 @@ hr{
     height: 40px;
     padding: 7px 30px 7px 30px;
     font-weight: 500;
-    background-color: #82378C;
+    background-color: #569171;
     color: #ffffff;
 }
 .container-fluid{
