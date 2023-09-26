@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign_up.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <title clas>Sign Up</title>
+    <div class="rectangle left-rectangle">
+        <div class="centered-text">
+            Create Your Account
+        </div>
+    </div>
+    
+</head>
+<body>
+    <div class="rectangle right-rectangle">
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="post">
+            <div class="form-group">
+                <label for="first_name">First Name </label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" >
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Set a Password </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number </label>
+                <input type="text" id="phone_number" name="phone_number" required>
+            </div><br><br>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
