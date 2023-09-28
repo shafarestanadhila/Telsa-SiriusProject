@@ -1,84 +1,88 @@
-$(document).on('click', 'nav-link', function(){
-  $(this).addClass('active').siblings().removeClass('active')
-})
-$(document).ready(function(){
-    const fotoArray = ['foto1', 'foto2', 'foto3', 'foto4', 'foto5', 'foto6'];
+$(document).ready(function () {
+  // Menangani klik pada elemen dengan class "nav-link"
+  $(".nav-link").click(function (event) {
+    event.preventDefault(); // Untuk mencegah navigasi ke halaman "help.html"
 
-    fotoArray.forEach((foto) => {
-        $(`.${foto}`).hover(() => {
-            $(`.${foto}`).css({
-                "-webkit-filter": "brightness(100%)",
-                "-webkit-transition": "all 0.5s ease",
-                "-moz-transition": "all 0.5s ease",
-                "-o-transition": "all 0.5s ease",
-                "-ms-transition": "all 0.5s ease",
-                "transition": "all 0.2s ease"
-            });
-        }, function() {
-            $(`.${foto}`).css({
-                "border": "5px solid white",
-                "-webkit-filter": "brightness(65%)"
-            });
-        });
-    });
+    // Menghapus class 'active' dari semua elemen dengan class 'nav-link'
+    $(".nav-link").removeClass("active");
 
-    // Teks yang akan dianimasikan
-    var text = "I'm website developer based in Depok, and I'm very passionate and dedicated to my work.";
-    var speed = 30; // Kecepatan ketikan (ms per karakter)
-    
-    // Inisialisasi animasi
-    var i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        // Menambahkan karakter ke teks secara berurutan
-        $(".typing").text(text.substring(0, i+1));
-        i++;
-        setTimeout(typeWriter, speed);
-      }
+    // Menambah class 'active' pada elemen yang di-klik
+    $(this).addClass("active");
+  });
+
+  // Menangani klik pada elemen dengan class "nav-contact"
+  $(".nav-contact").click(function (event) {
+    event.preventDefault(); // Untuk mencegah navigasi ke halaman "help.html"
+
+    // Menghapus class 'active' dari semua elemen dengan class 'nav-contact'
+    $(".nav-contact").removeClass("active");
+
+    // Menambah class 'active' pada elemen yang di-klik
+    $(this).addClass("active");
+
+    // Mengganti gambar saat elemen ini di-klik
+    $(this).find(".img-fluid2").attr("src", "image/help-menu2.png");
+  });
+
+  // Menangani klik pada elemen dengan class "nav-chart"
+  $(".nav-chart").click(function (event) {
+    event.preventDefault(); // Untuk mencegah navigasi ke halaman "help.html"
+
+    // Menghapus class 'active' dari semua elemen dengan class 'nav-contact'
+    $(".nav-chart").removeClass("active");
+
+    // Menambah class 'active' pada elemen yang di-klik
+    $(this).addClass("active");
+
+    // Mengganti gambar saat elemen ini di-klik
+    $(this).find(".img-fluid1").attr("src", "image/cart-menu2.png");
+  });
+
+  // Menangani hover pada elemen dengan class "img-fluid1"
+  $(".img-fluid1").hover(
+    function () {
+      // Mengganti gambar saat dihover
+      $(this).attr("src", "image/cart-menu2.png");
+    },
+    function () {
+      // Mengembalikan gambar ke gambar awal saat hover dihentikan
+      $(this).attr("src", "image/cart-menu.png");
     }
-    
-    // Memulai animasi ketikan saat halaman dimuat
-    typeWriter();
+  );
 
-    $(".img-fluid1").hover(
-      function() {
-        // Mengganti gambar saat dihover
-        $(this).attr("src", "image/chart-menu2.png");
-      },
-      function() {
-        // Mengembalikan gambar ke gambar awal saat hover dihentikan
-        $(this).attr("src", "image/chart-menu.png");
-      }
-    );
-    $(".img-fluid2").hover(
-      function() {
-        // Mengganti gambar saat dihover
-        $(this).attr("src", "image/contact-menu2.png");
-      },
-      function() {
-        // Mengembalikan gambar ke gambar awal saat hover dihentikan
-        $(this).attr("src", "image/contact-menu.png");
-      }
-    );
-    $(".img-fluid3").hover(
-      function() {
-        // Mengganti gambar saat dihover
-        $(this).attr("src", "image/signin-menu2.png");
-      },
-      function() {
-        // Mengembalikan gambar ke gambar awal saat hover dihentikan
-        $(this).attr("src", "image/signin-menu.png");
-      }
-    );
-    $(".img-fluid4").hover(
-      function() {
-        // Mengganti gambar saat dihover
-        $(this).attr("src", "image/signup-menu2.png");
-      },
-      function() {
-        // Mengembalikan gambar ke gambar awal saat hover dihentikan
-        $(this).attr("src", "image/signup-menu.png");
-      }
-    );
+  // Menangani hover pada elemen dengan class "img-fluid2"
+  $(".img-fluid2").hover(
+    function () {
+      // Mengganti gambar saat dihover
+      $(this).attr("src", "image/help-menu2.png");
+    },
+    function () {
+      // Mengembalikan gambar ke gambar awal saat hover dihentikan
+      $(this).attr("src", "image/help-menu.png");
+    }
+  );
+
+  // Menangani hover pada elemen dengan class "img-fluid3"
+  $(".img-fluid3").hover(
+    function () {
+      // Mengganti gambar saat dihover
+      $(this).attr("src", "image/sign-in-menu2.png");
+    },
+    function () {
+      // Mengembalikan gambar ke gambar awal saat hover dihentikan
+      $(this).attr("src", "image/sign-in-menu.png");
+    }
+  );
+
+  // Menangani hover pada elemen dengan class "img-fluid4"
+  $(".img-fluid4").hover(
+    function () {
+      // Mengganti gambar saat dihover
+      $(this).attr("src", "image/sign-up-menu2.png");
+    },
+    function () {
+      // Mengembalikan gambar ke gambar awal saat hover dihentikan
+      $(this).attr("src", "image/sign-up-menu.png");
+    }
+  );
 });
-
