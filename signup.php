@@ -1,3 +1,36 @@
+<?php
+  session_start();
+
+  include("connect.php");
+
+  if(isset($_POST["submit"])){
+    $firstname  = $_POST['first-name'];
+    $lastname   = $_POST['last-name'];
+    $email      = $_POST['email'];
+    $password   = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+    $status     = $_POST['status'];
+
+    file_put_contents('register.txt', "Email: $email, Password From Request: {$_POST['password']}, Password Hashed: $password\n", FILE_APPEND);
+
+    if(!empty($email) && !empty($password) && !is_numeric($email)){
+
+      $query  = "INSERT INTO tb_user (first_name, last_name, email, password, status) VALUES ('$firstname', '$lastname', '$email', '$password', '$status')";
+
+      mysqli_query($conn, $query);
+
+      echo
+      "
+      <script>
+      alert('Data Added Succesfully');
+      document.location.href = 'signin.php';
+      </script>
+      "
+      ;
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +42,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="_css/signup.css" />
+    <link rel="stylesheet" href="signup.css" />
 
     <title>Telsa | Signup</title>
 
@@ -28,61 +61,15 @@
   <body>
     <div class="container">
       <div class="image justify-content-center">
-        <h1>CREATE YOUR ACCOUNT</h1>
+        <h1>CREATE YOUR ACCOUNT</span></h1>
       </div>
 
       <div class="signup">
         <div class="img-logo">
-          <a href="signin.php">
-            <img class="img-fluid5" src="image/back.png" alt="logo" width="50" />
-          </a>
-        </div>
+            <a href="signin.php"><img class="img-fluid5" src="image/back.png" alt="logo" width="50" /></a>
+          </div>
         <h2>Sign Up</h2>
         <form class="form-signup col-lg-9 align-item-center" action="" method="POST">
-          
-        <?php
-          session_start();
-
-          // Sertakan file koneksi ke database
-          include("connect.php");
-
-          if (isset($_POST["submit"])) {
-              $fnama = $_POST['first-name'];
-              $lnama = $_POST['last-name'];
-              $email = $_POST['email'];
-              $password = $_POST['password'];
-              $status = $_POST['status'];
-
-              // Validasi alamat email
-              if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                  echo "Alamat email tidak valid";
-              } elseif (strlen($password) < 8) {
-                  // Validasi kata sandi
-                  echo "Kata sandi harus memiliki panjang minimal 8 karakter";
-              } else {
-                  // Kata sandi valid, lakukan operasi penyimpanan ke database
-
-                  // Pastikan untuk melakukan hashing kata sandi
-                  $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-                  // Gunakan prepared statement untuk menghindari SQL injection
-                  $query = "INSERT INTO tabel_customer (`fnama`, `lnama`, `email`, `password`, `status`) VALUES (?, ?, ?, ?, ?)";
-                  $stmt = mysqli_prepare($conn, $query);
-                  mysqli_stmt_bind_param($stmt, "sssss", $fnama, $lnama, $email, $hashedPassword, $status);
-
-                  if (mysqli_stmt_execute($stmt)) {
-                      // Registrasi berhasil
-                      echo "<script>alert('Registrasi berhasil. Silakan login.'); window.location.href = 'signin.php';</script>";
-                  } else {
-                      // Kesalahan saat menyimpan data
-                      echo "Error: " . mysqli_error($conn);
-                  }
-
-                  mysqli_stmt_close($stmt);
-              }
-          }
-          ?>
-        
           <div class="form-group name">
             <div class="mb-3">
               <label for="">First Name <span class="color-red">*</span></label>
@@ -110,7 +97,7 @@
           <div class="mb-3">
             <label for=""> Email <span class="color-red">*</span> </label>
             <input
-              type="text"
+              type="email"
               class="email form-control"
               id="email"
               name="email"
@@ -140,12 +127,10 @@
               <option value="Agen">Agen</option>
             </select>
           </div>
-
-          <!-- Hidden input untuk token CSRF (tambahkan sesuai kebutuhan) -->
-          <input type="hidden" name="csrf_token" value="token_anda_di_sini" />
-
-          <button type="submit" name="submit" class="btn">Create</button>
+          <a href="signin.php">
+            <button type="submit"  name="submit" class="btn">Create</button></a>
         </form>
+
       </div>
     </div>
 
@@ -161,3 +146,6 @@
     <script src="main.js"></script>
   </body>
 </html>
+
+<?php
+

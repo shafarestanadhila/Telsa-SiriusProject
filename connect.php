@@ -1,8 +1,6 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "telsa";
-
-    $conn = new mysqli($servername,$username,$password,$dbname);
+$conn = mysqli_connect("localhost", "root", "", "tracking");
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>

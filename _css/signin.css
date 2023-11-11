@@ -98,6 +98,8 @@ h1 {
   font-weight: 500;
   background-color: #ff6a00;
   color: #ffffff;
+  margin-left: 22vh;
+  margin-top: 6vh;
 }
 
 .btn2 {
@@ -107,6 +109,8 @@ h1 {
   font-weight: 500;
   background-color: #569171;
   color: #ffffff;
+  margin-top: 6vh;
+  margin-left: 25vh;
 }
 
 .btn:hover {

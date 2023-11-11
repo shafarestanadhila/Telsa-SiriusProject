@@ -60,9 +60,7 @@ h1 {
   justify-content: space-between;
   gap: 10px;
 }
-form .btn {
-  margin-left: -10vh;
-}
+
 .btn {
   border-radius: 22.5px;
   height: 45px;
@@ -71,6 +69,8 @@ form .btn {
   font-weight: 500;
   background-color: #ff6a00;
   color: #ffffff;
+  margin-left: 33vh;
+  margin-top: 2vh;
 }
 
 .btn2 {
@@ -80,6 +80,8 @@ form .btn {
   font-weight: 500;
   background-color: #569171;
   color: #ffffff;
+  margin-top: 6vh;
+  margin-left: 25vh;
 }
 
 .btn:hover {

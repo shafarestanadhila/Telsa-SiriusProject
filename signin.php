@@ -1,3 +1,47 @@
+<?php
+include("connect.php");
+$conn = mysqli_connect("localhost", "root", "", "tracking");
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  // Log posted values for debugging purposes
+  file_put_contents('login.txt', "Email: $email, Password: $password\n", FILE_APPEND);
+
+
+  // Lakukan query ke database
+  $query = "SELECT * FROM tb_user WHERE email='$email'";
+  $result = mysqli_query($conn, $query);
+
+
+  if ($result && mysqli_num_rows($result) > 0) {
+    $user = mysqli_fetch_assoc($result);
+    // Bandingkan password 
+
+    // Compare hashed password with user-submitted password
+  $hashedPassword = $user['password'];  // Get hashed password from the database
+  $submittedPassword = $password;  // Get the submitted password
+
+  // Log both hashed passwords for comparison
+  file_put_contents('login.txt', "Hashed Password in DB: $hashedPassword, Hashed Password Submitted: " . password_hash($submittedPassword, PASSWORD_DEFAULT) . "\n", FILE_APPEND);
+    
+  if (password_verify($submittedPassword, $hashedPassword))  {
+      header('Location: home.php');
+      exit();
+    } else {
+      echo "Sign in failed. Invalid email or password.";
+    }
+  } else {
+    echo "No user found for the given email.";
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +53,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="_css/signin.css" />
+    <link rel="stylesheet" href="signin.css" />
 
     <title>Telsa | Signin</title>
 
@@ -30,9 +74,9 @@
     <div class="container">
       <div class="signin">
         <h2>Sign In</h2>
-        <form class="form-login col-lg-9 align-item-center" action="">
+        <form class="form-login col-lg-9 align-item-center" action="signin.php" method="POST">
           <div class="mb-3">
-            <label for=""> Email <span class="color-red">*</span> </label>
+            <label for="email"> Email <span class="color-red">*</span> </label>
             <input
               type="text"
               class="email form-control"
@@ -44,7 +88,7 @@
           </div>
 
           <div class="mb-3">
-            <label for=""> Password <span class="color-red">*</span> </label>
+            <label for="password"> Password <span class="color-red">*</span> </label>
             <input
               type="password"
               class="password form-control"
@@ -54,6 +98,7 @@
               required
             />
           </div>
+          <button type="submit" class="btn">Login</button>
         </form>
         <div class="form-group remember-forgot">
           <div class="remember-me">
@@ -64,8 +109,6 @@
             <a href="#">Forgot Password?</a>
           </div>
         </div>
-
-        <a href="home.php"><button type="submit" class="btn">Login</button></a>
       </div>
 
       <div class="image justify-content-center">
@@ -74,8 +117,7 @@
         </div>
         <h1>WELCOME TO <span class="text-color">TELSA</span></h1>
         <h3>Buy high quality eggs here</h3>
-        <a href="signup.php"
-          ><button type="submit" class="btn2">Signup here</button></a
+        <a href="signup.html"><button type="submit" class="btn2">Signup here</button></a
         >
       </div>
     </div>

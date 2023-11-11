@@ -9,7 +9,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="_css/home.css" />
+    <link rel="stylesheet" href="index.css" />
 
     <title>Telsa | Home</title>
 
@@ -30,7 +30,7 @@
 
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.php"
+        <a class="navbar-brand" href="home.html"
           ><img
             src="image/telsa.png"
             alt="logo"
@@ -55,21 +55,21 @@
             style="--bs-scroll-height: 100px"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="order.php">Order</a>
+              <a class="nav-link" href="order.html">Order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tracking.php">Tracking</a>
+              <a class="nav-link" href="tracking.html">Tracking</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="data.php">Data</a>
+              <a class="nav-link" href="data.html">Data</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-button">
-              <a class="nav-chart" href="chart.php"
+              <a class="nav-chart" href="chart.html"
                 ><img
                   src="image/cart-menu.png"
                   alt="chart"
@@ -79,7 +79,7 @@
               /></a>
             </li>
             <li class="nav-button">
-              <a class="nav-contact" href="help.php"
+              <a class="nav-contact" href="help.html"
                 ><img
                   src="image/help-menu.png"
                   alt="contact"
@@ -100,7 +100,7 @@
                   <div id="logout-popup" class="popup">
                     <ul>
                       <li class="logout">
-                        <p><a href="index.php">Logout</a></p>
+                        <p><a href="index.html">Logout</a></p>
                       </li>
                       <li class="logout">
                         <p id="cancel-logout">Batal</p>
@@ -109,7 +109,14 @@
                   </div>
                 </li>
                 <li class="nav-profil2">
-                  <p>Dany Fadhilah</p>
+                <?php if (isset($_SESSION['username'])) : ?>
+                    <li>
+                      <a href="/profil">
+                        <img src="icon_profil.png" alt="Profil">
+                        <?= $_SESSION['username']; ?>
+                      </a>
+                    </li>
+                  <?php endif; ?>
                 </li>
             </li>
           </ul>
@@ -172,7 +179,7 @@
                       <img src="image/telur1.png" alt="homefoto2" width="450">
                       <div class="paragraf-container">
                         <p>Mau beli telur?</p>
-                        <a class="order" href="order.php"><button class="btn2" type="button">Klik disini</button></a>
+                        <a class="order" href="navbar.html"><button class="btn2" type="button">Klik disini</button></a>
                       </div>
                   </div>
               </div>
